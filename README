@@ -1,0 +1,15 @@
+Installed plugins:
+
+To use this configurations, just make a soft symbol link to vimrc.
+
+$ (clone or copy thie files to ~/.vim)
+$ cd ~
+$ ln -s .vim/vimrc .vimrc
+
+[18-Jan-2013]
+CtrlP : Quick search file by name patterns.
+NERD_Commenter : Quick comment blocks of codes.
+python_fn : Assistant for browsing or selecting python code.
+
+Enable code complete for most build-in support languages.
+Show tab and eol characters.
