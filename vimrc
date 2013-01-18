@@ -96,7 +96,7 @@ if has("autocmd")
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType c set omnifunc=ccomplete#Complete
   " Feng Zihao : Expand tab into spaces
-  autocmd FileType python set expandtab
+  autocmd FileType python,javascript,html,css set expandtab
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
@@ -147,3 +147,5 @@ let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 " Change the default complete key to Ctrl + \
 inoremap <C-\> <C-x><C-o>
 
+" Map F12 to open MiniBufExplMappings
+map <F12> :MiniBufExplorer<cr>
