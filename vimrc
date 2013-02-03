@@ -98,9 +98,14 @@ if has("autocmd")
   " Feng Zihao : Expand tab into spaces
   autocmd FileType python,javascript,html,css set expandtab
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
+  " For all text files set 'textwidth' to 100 characters.
+  autocmd FileType text setlocal textwidth=100
+  autocmd FileType javascript set ts=2
+  autocmd FileType javascript set sw=2
+  autocmd FileType html set ts=2
+  autocmd FileType html set sw=2
+  autocmd FileType css set ts=2
+  autocmd FileType css set sw=2
   " When editing a file, always jump to the last known cursor position.
   autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
