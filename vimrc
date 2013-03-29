@@ -152,3 +152,8 @@ inoremap <C-\> <C-x><C-o>
 
 " Map F12 to open MiniBufExplMappings
 map <F12> :MiniBufExplorer<cr>
+
+
+
+let g:flake8_max_line_length=100
+let g:flake8_ignore="E127,E128,E501,W404"
