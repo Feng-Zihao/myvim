@@ -146,7 +146,7 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
   \ 'dir' : '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
+  \ 'file': '\v\.(exe|so|dll|pyc|class)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 "let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
@@ -158,7 +158,9 @@ inoremap <C-\> <C-x><C-o>
 " Map F12 to open MiniBufExplMappings
 map <F12> :MiniBufExplorer<cr>
 
-
+" Map F8 to open Nerdtree
+map <F8> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.class$','\.git$',]
 
 let g:flake8_max_line_length=100
 let g:flake8_ignore="E127,E128,E501,W404"
