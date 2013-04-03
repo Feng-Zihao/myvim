@@ -40,7 +40,8 @@ set completeopt-=preview  " don't show preview window when performing complete
 set whichwrap=<,>
 set encoding=utf-8
 set smarttab
-set t_Co=16
+set t_Co=256
+colorscheme molokai
 
 " show the tab and eol character and set their color
 set list
@@ -87,7 +88,7 @@ if has("autocmd")
   autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
   autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-
+  " Enable build-in complete
   autocmd FileType python set omnifunc=pythoncomplete#Complete
   autocmd FileType javascrīpt set omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -95,17 +96,15 @@ if has("autocmd")
   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType c set omnifunc=ccomplete#Complete
+
   " Feng Zihao : Expand tab into spaces
-  autocmd FileType python,javascript,html,css set expandtab
+  autocmd FileType java set noet | set ts=4 | set sw=4
+  autocmd FileType python set et | set ts=4 | set sw=4
+  autocmd FileType xml,javascript,html,css set et | set ts=2 | set sw=2
 
   " For all text files set 'textwidth' to 100 characters.
   autocmd FileType text setlocal textwidth=100
-  autocmd FileType javascript set ts=2
-  autocmd FileType javascript set sw=2
-  autocmd FileType html set ts=2
-  autocmd FileType html set sw=2
-  autocmd FileType css set ts=2
-  autocmd FileType css set sw=2
+
   " When editing a file, always jump to the last known cursor position.
   autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
