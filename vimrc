@@ -35,11 +35,13 @@ set incsearch		" do incremental searching
 set nu
 set ts=4
 set sw=4
+set expandtab
 set tabpagemax=50
 set completeopt-=preview  " don't show preview window when performing complete
 set whichwrap=<,>
 set encoding=utf-8
 set smarttab
+set smartindent
 set t_Co=256
 colorscheme molokai
 
