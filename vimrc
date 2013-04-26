@@ -86,7 +86,7 @@ if has("autocmd")
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
   au!
-	
+
   autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
   autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
@@ -101,11 +101,12 @@ if has("autocmd")
 
   " Feng Zihao : Expand tab into spaces
   autocmd FileType java set noet | set ts=4 | set sw=4
+  autocmd FileType sql set noet | set ts=4 | set sw=4 | set et
   autocmd FileType python set et | set ts=4 | set sw=4
   autocmd FileType xml,javascript,html,css set et | set ts=2 | set sw=2
 
   " For all text files set 'textwidth' to 100 characters.
-  autocmd FileType text setlocal textwidth=100
+  autocmd FileType text setlocal textwidth=100 | set et | set ts=2 | set sw=2
 
   " When editing a file, always jump to the last known cursor position.
   autocmd BufReadPost *
@@ -131,7 +132,7 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+      \ | wincmd p | diffthis
 endif
 
 
@@ -139,7 +140,7 @@ endif
 " Configure CtrlP plugin
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'c'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
@@ -161,7 +162,8 @@ map <F12> :MiniBufExplorer<cr>
 
 " Map F8 to open Nerdtree
 map <F8> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\~$', '\.class$','\.git$',]
+let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$','\.git$',]
+let g:NERDTreeChDirMode=2
 
 let g:flake8_max_line_length=100
 let g:flake8_ignore="E127,E128,E501,W404"
