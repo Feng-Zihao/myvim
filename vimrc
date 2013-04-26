@@ -102,7 +102,7 @@ if has("autocmd")
   " Feng Zihao : Expand tab into spaces
   autocmd FileType java set noet | set ts=4 | set sw=4
   autocmd FileType sql set noet | set ts=4 | set sw=4 | set et
-  autocmd FileType python set et | set ts=4 | set sw=4
+  autocmd FileType python,yaml set et | set ts=4 | set sw=4
   autocmd FileType xml,javascript,html,css set et | set ts=2 | set sw=2
 
   " For all text files set 'textwidth' to 100 characters.
