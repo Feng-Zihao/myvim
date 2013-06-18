@@ -27,6 +27,7 @@ set backspace=indent,eol,start
 "endif
 
 set nocompatible
+set clipboard=unnamedplus
 set nobackup
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -47,7 +48,7 @@ colorscheme molokai
 
 " show the tab and eol character and set their color
 set list
-set listchars=eol:⇐,tab:⇒⋅ " use special character on eol and tab character
+set listchars=eol:⇐,tab:⇒\  " use special character on eol and tab character
 hi SpecialKey term=bold ctermfg=8 guifg=Blue 
 hi NonText term=bold ctermfg=8 guifg=Blue
 
@@ -92,7 +93,7 @@ if has("autocmd")
 
   " Enable build-in complete
   autocmd FileType python set omnifunc=pythoncomplete#Complete
-  autocmd FileType javascrīpt set omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
   autocmd FileType css set omnifunc=csscomplete#CompleteCSS
   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
@@ -100,13 +101,13 @@ if has("autocmd")
   autocmd FileType c set omnifunc=ccomplete#Complete
 
   " Feng Zihao : Expand tab into spaces
-  autocmd FileType java set noet | set ts=4 | set sw=4
-  autocmd FileType sql set noet | set ts=4 | set sw=4 | set et
-  autocmd FileType python,yaml set et | set ts=4 | set sw=4
-  autocmd FileType xml,javascript,html,css set et | set ts=2 | set sw=2
+  autocmd FileType java set noet ts=4 sw=4
+  autocmd FileType sql set noet ts=4 sw=4
+  autocmd FileType xml,python,yaml set et ts=4 sw=4
+  autocmd FileType javascript,html,css set et ts=2 sw=2
 
   " For all text files set 'textwidth' to 100 characters.
-  autocmd FileType text setlocal textwidth=100 | set et | set ts=2 | set sw=2
+  autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
 
   " When editing a file, always jump to the last known cursor position.
   autocmd BufReadPost *
@@ -158,12 +159,14 @@ let g:ctrlp_custom_ignore = {
 inoremap <C-\> <C-x><C-o>
 
 " Map F12 to open MiniBufExplMappings
-map <F12> :MiniBufExplorer<cr>
+map <F12> :MiniBufExplorer<CR>
+map <C-right> :bnext<CR>
+map <C-left> :bprevious<CR>
 
 " Map F8 to open Nerdtree
 map <F8> :NERDTreeToggle<CR>
-let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$','\.git$',]
+let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$', '\.git$', '\__init__.py', '\*.swp']
 let g:NERDTreeChDirMode=2
 
 let g:flake8_max_line_length=100
-let g:flake8_ignore="E127,E128,E501,W404"
+let g:flake8_ignore="E121,E126,E127,E128,E501,W404"
