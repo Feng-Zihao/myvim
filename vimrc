@@ -165,7 +165,7 @@ map <C-left> :bprevious<CR>
 
 " Map F8 to open Nerdtree
 map <F8> :NERDTreeToggle<CR>
-let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$', '\.git$', '\__init__.py', '\*.swp']
+let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$', '\.git$', '__init__.py$', '\.swp$']
 let g:NERDTreeChDirMode=2
 
 let g:flake8_max_line_length=100
