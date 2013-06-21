@@ -75,6 +75,7 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
@@ -97,8 +98,7 @@ if has("autocmd")
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
   autocmd FileType css set omnifunc=csscomplete#CompleteCSS
   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-  autocmd FileType c set omnifunc=ccomplete#Complete
+  autocmd FileType c set omnifunc=ClangComplete
 
   " Feng Zihao : Expand tab into spaces
   autocmd FileType java set noet ts=4 sw=4
@@ -117,16 +117,13 @@ if has("autocmd")
 
   augroup END
 
-  " Auto watch vimrc
-  augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-  augroup END
 else
 
-"  set autoindent		" always set autoindenting on
+  set autoindent   " always set autoindenting on
 
 endif " has("autocmd")
+
+
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -135,7 +132,6 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
       \ | wincmd p | diffthis
 endif
-
 
 
 " Configure CtrlP plugin
@@ -165,8 +161,13 @@ map <C-left> :bprevious<CR>
 
 " Map F8 to open Nerdtree
 map <F8> :NERDTreeToggle<CR>
-let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$', '\.git$', '\__init__.py', '\*.swp']
+let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$', '\.git$', '__init__.py$', '\.swp$', '\.o$']
 let g:NERDTreeChDirMode=2
 
 let g:flake8_max_line_length=100
 let g:flake8_ignore="E121,E126,E127,E128,E501,W404"
+
+" clang complete settings
+let g:clang_auto_select=0
+let g:clang_complete_auto=1
+let g:clang_complete_copen=1
