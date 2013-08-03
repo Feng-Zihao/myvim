@@ -171,3 +171,4 @@ let g:flake8_ignore="E121,E126,E127,E128,E501,W404"
 let g:clang_auto_select=0
 let g:clang_complete_auto=1
 let g:clang_complete_copen=1
+let g:clang_user_options='-std=c++11'
