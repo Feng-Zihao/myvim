@@ -44,7 +44,7 @@ set encoding=utf-8
 set smarttab
 set smartindent
 set t_Co=256
-colorscheme molokai
+colorscheme default
 
 " show the tab and eol character and set their color
 set list
@@ -104,7 +104,7 @@ if has("autocmd")
   autocmd FileType java set noet ts=4 sw=4
   autocmd FileType sql set noet ts=4 sw=4
   autocmd FileType xml,python,yaml set et ts=4 sw=4
-  autocmd FileType javascript,html,css set et ts=2 sw=2
+  autocmd FileType javascript,html,css,ruby set et ts=2 sw=2
 
   " For all text files set 'textwidth' to 100 characters.
   autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
@@ -137,7 +137,7 @@ endif
 " Configure CtrlP plugin
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'ra'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows

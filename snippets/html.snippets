@@ -213,7 +213,7 @@ snippet body
 		${1}
 	</body>
 snippet br
-	<br />${1}
+	<br>${1}
 snippet button
 	<button type="${1:submit}">${2}</button>
 snippet button.
@@ -447,15 +447,13 @@ snippet xhtml
 	</html>
 snippet html5
 	<!DOCTYPE html>
-	<html>
-		<head>
-			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-			<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-			${2:meta}
-		</head>
-		<body>
-			${3:body}
-		</body>
+	<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<title>${1}</title>
+	</head>
+	<body>
+	</body>
 	</html>
 snippet i
 	<i>${1}</i>
@@ -472,53 +470,53 @@ snippet img.
 snippet img#
 	<img id="${1}" src="${2}" alt="${3}" />${4}
 snippet input
-	<input type="${1:text/submit/hidden/button/image}" name="${2}" id="${3:$2}" value="${4}" />${5}
+	<input type="${1:text/submit/hidden/button/image}" name="${2}" id="${3:$2}" value="${4}">${5}
 snippet input.
-	<input class="${1}" type="${2:text/submit/hidden/button/image}" name="${3}" id="${4:$3}" value="${5}" />${6}
+	<input class="${1}" type="${2:text/submit/hidden/button/image}" name="${3}" id="${4:$3}" value="${5}">${6}
 snippet input:text
-	<input type="text" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="text" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:submit
-	<input type="submit" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="submit" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:hidden
-	<input type="hidden" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="hidden" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:button
-	<input type="button" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="button" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:image
-	<input type="image" name="${1}" id="${2:$1}" src="${3}" alt="${4}" />${5}
+	<input type="image" name="${1}" id="${2:$1}" src="${3}" alt="${4}">${5}
 snippet input:checkbox
-	<input type="checkbox" name="${1}" id="${2:$1}" />${3}
+	<input type="checkbox" name="${1}" id="${2:$1}">${3}
 snippet input:radio
-	<input type="radio" name="${1}" id="${2:$1}" />${3}
+	<input type="radio" name="${1}" id="${2:$1}">${3}
 snippet input:color
-	<input type="color" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="color" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:date
-	<input type="date" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="date" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:datetime
-	<input type="datetime" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="datetime" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:datetime-local
-	<input type="datetime-local" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="datetime-local" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:email
-	<input type="email" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="email" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:file
-	<input type="file" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="file" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:month
-	<input type="month" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="month" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:number
-	<input type="number" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="number" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:password
-	<input type="password" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="password" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:range
-	<input type="range" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="range" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:reset
-	<input type="reset" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="reset" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:search
-	<input type="search" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="search" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:time
-	<input type="time" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="time" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:url
-	<input type="url" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="url" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet input:week
-	<input type="week" name="${1}" id="${2:$1}" value="${3}" />${4}
+	<input type="week" name="${1}" id="${2:$1}" value="${3}">${4}
 snippet ins
 	<ins>${1}</ins>
 snippet kbd
@@ -552,17 +550,17 @@ snippet lia+
 	<li><a href="${2:#}">${1}</a></li>
 	lia+${3}
 snippet link
-	<link rel="${1}" href="${2}" title="${3}" type="${4}" />${5}
+	<link rel="${1}" href="${2}" title="${3}" type="${4}">${5}
 snippet link:atom
-	<link rel="alternate" href="${1:atom.xml}" title="Atom" type="application/atom+xml" />${2}
+	<link rel="alternate" href="${1:atom.xml}" title="Atom" type="application/atom+xml">${2}
 snippet link:css
-	<link rel="stylesheet" href="${1:style.css}" type="text/css" media="${2:all}" />${3}
+	<link rel="stylesheet" href="${1:style.css}" type="text/css" media="${2:all}">${3}
 snippet link:favicon
-	<link rel="shortcut icon" href="${1:favicon.ico}" type="image/x-icon" />${2}
+	<link rel="shortcut icon" href="${1:favicon.ico}" type="image/x-icon">${2}
 snippet link:rss
-	<link rel="alternate" href="${1:rss.xml}" title="RSS" type="application/atom+xml" />${2}
+	<link rel="alternate" href="${1:rss.xml}" title="RSS" type="application/atom+xml">${2}
 snippet link:touch
-	<link rel="apple-touch-icon" href="${1:favicon.png}" />${2}
+	<link rel="apple-touch-icon" href="${1:favicon.png}">${2}
 snippet map
 	<map name="${1}">
 		${2}
@@ -694,11 +692,11 @@ snippet samp
 		${1}
 	</samp>
 snippet script
-	<script type="text/javascript" charset="utf-8">
+	<script>
 		${1}
 	</script>
 snippet scriptsrc
-	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${1}.js"></script>
 snippet section
 	<section>
 		${1}
@@ -829,4 +827,4 @@ snippet var
 snippet video
 	<video src="${1} height="${2}" width="${3}" preload="${5:none}" autoplay="${6:autoplay}>${7}</video>${8}
 snippet wbr
-	<wbr />${1}
+	<wbr/>${1}
