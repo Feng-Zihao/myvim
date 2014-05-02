@@ -17,6 +17,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Rip-Rip/clang_complete'
+Plugin 'kien/ctrlp.vim'
 
 
 call vundle#end()
@@ -49,7 +50,7 @@ set autoindent
 set list
 set listchars=eol:⇐,tab:⇒\  " use special character on eol and tab character
 
-colorscheme molokai
+colorscheme railscasts
 
 hi SpecialKey term=bold ctermfg=8 guifg=Blue 
 hi NonText term=bold ctermfg=8 guifg=Blue
@@ -110,9 +111,11 @@ map <F12> :MiniBufExplorer<CR>
 map <C-right> :bnext<CR>
 map <C-left>  :bprevious<CR>
 map <C-f> :FufFile<CR>
-
-
 map <F8> :NERDTreeToggle<CR>
+
+
+inoremap <C-\> <C-x><C-o>
+
 let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$', '\.git$', '__init__.py$', '\.swp$', '\.o$']
 let g:NERDTreeChDirMode=2
 
@@ -144,3 +147,24 @@ let g:jedi#popup_select_first = 0
 " let g:jedi#rename_command = "<leader>r"
 " let g:jedi#show_call_signatures = "1"
 " let g:jedi#completions_enabled = 0
+
+
+
+
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir' : '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|pyc|class)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+"let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+"let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
+
+
