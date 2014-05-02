@@ -27,8 +27,6 @@ set nu
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-
 set nocompatible
 set clipboard=unnamedplus
 set nobackup
@@ -48,7 +46,14 @@ set smarttab
 set smartindent
 set t_Co=256
 set autoindent
+set list
+set listchars=eol:⇐,tab:⇒\  " use special character on eol and tab character
+
 colorscheme molokai
+
+hi SpecialKey term=bold ctermfg=8 guifg=Blue 
+hi NonText term=bold ctermfg=8 guifg=Blue
+
 
 
 map Q gq
@@ -103,7 +108,7 @@ autocmd BufReadPost *
 
 map <F12> :MiniBufExplorer<CR>
 map <C-right> :bnext<CR>
-map <C-left> :bprevious<CR>
+map <C-left>  :bprevious<CR>
 map <C-f> :FufFile<CR>
 
 
