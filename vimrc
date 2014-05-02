@@ -44,7 +44,7 @@ set encoding=utf-8
 set smarttab
 set smartindent
 set t_Co=256
-colorscheme default
+colorscheme molokai
 
 " show the tab and eol character and set their color
 set list
@@ -95,16 +95,17 @@ if has("autocmd")
   " Enable build-in complete
   autocmd FileType python set omnifunc=pythoncomplete#Complete
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
   autocmd FileType css set omnifunc=csscomplete#CompleteCSS
   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
   autocmd FileType c set omnifunc=ClangComplete
 
   " Feng Zihao : Expand tab into spaces
-  autocmd FileType java set noet ts=4 sw=4
+  autocmd FileType java,jsp set noet ts=4 sw=4
   autocmd FileType sql set noet ts=4 sw=4
-  autocmd FileType xml,python,yaml set et ts=4 sw=4
-  autocmd FileType javascript,html,css,ruby set et ts=2 sw=2
+  autocmd FileType xml,python,yaml,javascript set et ts=4 sw=4
+  autocmd FileType html,css,ruby set et ts=2 sw=2
 
   " For all text files set 'textwidth' to 100 characters.
   autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
@@ -116,6 +117,12 @@ if has("autocmd")
     \ endif
 
   augroup END
+
+  " enable emmet only for html and css
+  let g:user_emmet_install_global = 0
+  autocmd FileType html,css EmmetInstall
+
+
 
 else
 
@@ -172,3 +179,4 @@ let g:clang_auto_select=0
 let g:clang_complete_auto=1
 let g:clang_complete_copen=1
 let g:clang_user_options='-std=c++11'
+
