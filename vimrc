@@ -9,15 +9,16 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/minibufexplorerpp'
-Plugin 'vim-scripts/tComment'
 Plugin 'vim-scripts/highlight.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-scripts/Conque-Shell'
 
 
 call vundle#end()
@@ -139,7 +140,7 @@ let g:jedi#auto_vim_configuration = 0
 let g:jedi#popup_select_first = 0
 " let g:jedi#auto_initialization = 0
 " let g:jedi#use_splits_not_buffers = "left"
-" let g:jedi#popup_on_dot = 0
+let g:jedi#popup_on_dot = 0
 " let g:jedi#goto_assignments_command = "<leader>g"
 " let g:jedi#goto_definitions_command = "<leader>d"
 " let g:jedi#documentation_command = "K"
