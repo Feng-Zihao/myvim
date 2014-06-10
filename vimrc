@@ -15,10 +15,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'kien/ctrlp.vim'
-Plugin 'vim-scripts/Conque-Shell'
+Plugin 'MattesGroeger/vim-bookmarks'
 
 
 call vundle#end()
@@ -82,7 +82,6 @@ au!
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -97,7 +96,7 @@ autocmd FileType css set noet
 autocmd FileType html,ruby set et ts=2 sw=2
 
 
-autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
+"autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
 
 
 " When editing a file, always jump to the last known cursor position.
@@ -115,7 +114,7 @@ map <C-f> :FufFile<CR>
 map <F8> :NERDTreeToggle<CR>
 
 
-inoremap <C-\> <C-x><C-o>
+inoremap <C-\> <C-x><C-O>
 
 let g:NERDTreeIgnore=['\.pyc$', '\~$', '\.class$', '\.git$', '__init__.py$', '\.swp$', '\.o$']
 let g:NERDTreeChDirMode=2
@@ -134,20 +133,20 @@ let g:NERDTreeChDirMode=2
 "
 
 
-let g:jedi#completions_command = "<C-p>"
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#popup_select_first = 0
-" let g:jedi#auto_initialization = 0
-" let g:jedi#use_splits_not_buffers = "left"
-let g:jedi#popup_on_dot = 0
-" let g:jedi#goto_assignments_command = "<leader>g"
-" let g:jedi#goto_definitions_command = "<leader>d"
-" let g:jedi#documentation_command = "K"
-" let g:jedi#usages_command = "<leader>n"
-" let g:jedi#rename_command = "<leader>r"
-" let g:jedi#show_call_signatures = "1"
-" let g:jedi#completions_enabled = 0
+"let g:jedi#completions_command = "<C-p>"
+"let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#auto_vim_configuration = 0
+"let g:jedi#popup_select_first = 0
+"" let g:jedi#auto_initialization = 0
+"" let g:jedi#use_splits_not_buffers = "left"
+"let g:jedi#popup_on_dot = 0
+"" let g:jedi#goto_assignments_command = "<leader>g"
+"" let g:jedi#goto_definitions_command = "<leader>d"
+"" let g:jedi#documentation_command = "K"
+"" let g:jedi#usages_command = "<leader>n"
+"" let g:jedi#rename_command = "<leader>r"
+"" let g:jedi#show_call_signatures = "1"
+"let g:jedi#completions_enabled = 0
 
 
 
