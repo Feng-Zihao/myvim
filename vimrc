@@ -110,7 +110,7 @@ autocmd BufReadPost *
 map <F12> :MiniBufExplorer<CR>
 map <C-right> :bnext<CR>
 map <C-left>  :bprevious<CR>
-map <C-f> :FufFile<CR>
+map <C-f> :FufCoverageFile<CR>
 map <F8> :NERDTreeToggle<CR>
 
 
