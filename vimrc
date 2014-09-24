@@ -19,6 +19,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'kien/ctrlp.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'mxw/vim-jsx'
 
 
 call vundle#end()
@@ -91,8 +92,7 @@ autocmd FileType c set omnifunc=ClangComplete
 
 autocmd FileType java,jsp set noet ts=4 sw=4
 autocmd FileType sql set noet ts=4 sw=4
-autocmd FileType xml,python,yaml,javascript set et ts=4 sw=4
-autocmd FileType css set noet
+autocmd FileType css,xml,python,yaml,javascript set et ts=4 sw=4
 autocmd FileType html,ruby set et ts=2 sw=2
 
 
