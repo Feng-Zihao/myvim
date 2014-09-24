@@ -20,6 +20,8 @@ Plugin 'Rip-Rip/clang_complete'
 Plugin 'kien/ctrlp.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+"Plugin 'zenorocha/dracula-theme'
 
 
 call vundle#end()
