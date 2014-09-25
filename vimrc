@@ -54,7 +54,8 @@ set autoindent
 set list
 set listchars=eol:⇐,tab:⇒\  " use special character on eol and tab character
 
-colorscheme railscasts
+"colorscheme railscasts
+colorscheme molokai
 
 hi SpecialKey term=bold ctermfg=8 guifg=Blue 
 hi NonText term=bold ctermfg=8 guifg=Blue
