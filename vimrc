@@ -54,8 +54,8 @@ set autoindent
 set list
 set listchars=eol:⇐,tab:⇒\  " use special character on eol and tab character
 
-"colorscheme railscasts
-colorscheme molokai
+colorscheme railscasts
+"colorscheme molokai
 
 hi SpecialKey term=bold ctermfg=8 guifg=Blue 
 hi NonText term=bold ctermfg=8 guifg=Blue
@@ -96,7 +96,7 @@ autocmd FileType c set omnifunc=ClangComplete
 autocmd FileType java,jsp set noet ts=4 sw=4
 autocmd FileType sql set noet ts=4 sw=4
 autocmd FileType css,xml,python,yaml,javascript set et ts=4 sw=4
-autocmd FileType html,ruby set et ts=2 sw=2
+autocmd FileType scss,html,ruby set et ts=2 sw=2
 
 
 "autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
