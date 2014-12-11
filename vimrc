@@ -171,3 +171,8 @@ let g:ctrlp_custom_ignore = {
 "let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
 
 
+" read local config if exists
+if filereadable(".vimrc")
+    source .vimrc
+endif
+
