@@ -21,6 +21,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'JulesWang/css.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 "Plugin 'zenorocha/dracula-theme'
 
 
@@ -97,6 +99,9 @@ autocmd FileType java,jsp set noet ts=4 sw=4
 autocmd FileType sql set noet ts=4 sw=4
 autocmd FileType css,xml,python,yaml,javascript set et ts=4 sw=4
 autocmd FileType scss,html,ruby set et ts=2 sw=2
+
+
+autocmd BufRead,BufNewFile *.scss set filetype=scss.css
 
 
 "autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
