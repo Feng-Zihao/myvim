@@ -50,7 +50,7 @@ set completeopt-=preview  " don't show preview window when performing complete
 set whichwrap=<,>
 set encoding=utf-8
 set smarttab
-set smartindent
+"set smartindent
 set t_Co=256
 set autoindent
 set list
@@ -159,7 +159,7 @@ let g:jedi#show_call_signatures = "1"
 let g:jedi#completions_enabled = 1
 
 
-
+let g:bookmark_auto_close = 1
 
 
 let g:ctrlp_map = '<c-p>'
@@ -179,7 +179,7 @@ let g:ctrlp_custom_ignore = {
 
 
 " read local config if exists
-if filereadable(".vimrc")
-    source .vimrc
+if filereadable("vimrc")
+    source vimrc
 endif
 
