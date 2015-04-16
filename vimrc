@@ -15,12 +15,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'Rip-Rip/clang_complete'
 Plugin 'kien/ctrlp.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
-Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mitsuhiko/vim-jinja'
 Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 "Plugin 'zenorocha/dracula-theme'
@@ -35,7 +33,7 @@ set nu
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set nocompatible
-set clipboard=unnamedplus
+set clipboard=unnamed
 set nobackup
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -97,8 +95,8 @@ autocmd FileType c set omnifunc=ClangComplete
 
 autocmd FileType java,jsp set noet ts=4 sw=4
 autocmd FileType sql set noet ts=4 sw=4
-autocmd FileType css,xml,python,yaml,javascript set et ts=4 sw=4
-autocmd FileType scss,html,ruby set et ts=2 sw=2
+autocmd FileType css,xml,python,yaml set et ts=4 sw=4
+autocmd FileType scss,html,ruby,javascript set et ts=2 sw=2
 
 autocmd FileType python setlocal completeopt-=preview
 
