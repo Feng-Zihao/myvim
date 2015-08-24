@@ -19,8 +19,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mitsuhiko/vim-jinja'
+Plugin 'mxw/vim-jsx'
 Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'embear/vim-localvimrc'
 "Plugin 'zenorocha/dracula-theme'
 
 
@@ -95,16 +97,16 @@ autocmd FileType c set omnifunc=ClangComplete
 
 autocmd FileType java,jsp set noet ts=4 sw=4
 autocmd FileType sql set noet ts=4 sw=4
-autocmd FileType css,xml,python,yaml set et ts=4 sw=4
-autocmd FileType scss,html,ruby,javascript set et ts=2 sw=2
+autocmd FileType scss,css,xml,python,yaml,javascript set et ts=4 sw=4
+autocmd FileType html,ruby set et ts=2 sw=2
 
 autocmd FileType python setlocal completeopt-=preview
 
 
-autocmd BufRead,BufNewFile *.scss set filetype=scss.css
+autocmd BufRead,BufNewFile *.scss setl filetype=scss.css
 
 
-"autocmd FileType text setlocal textwidth=100 et ts=2 sw=2
+autocmd FileType text setlocal set ts=2 sw=2
 
 
 " When editing a file, always jump to the last known cursor position.
@@ -174,10 +176,15 @@ let g:ctrlp_custom_ignore = {
   \ }
 "let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 "let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
+"
+
+
+let g:localvimrc_ask = 0
 
 
 " read local config if exists
 if filereadable("vimrc")
     source vimrc
 endif
+
 
