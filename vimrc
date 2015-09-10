@@ -12,6 +12,9 @@ Plugin 'vim-scripts/minibufexplorerpp'
 Plugin 'vim-scripts/highlight.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
@@ -183,8 +186,8 @@ let g:localvimrc_ask = 0
 
 
 " read local config if exists
-if filereadable("vimrc")
-    source vimrc
-endif
+" if filereadable("vimrc")
+"    source vimrc
+" endif
 
 
